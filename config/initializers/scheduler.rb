@@ -25,7 +25,7 @@ def send_notif(message)
 end
 s.every '30s' do 
 	post = Post.order(f_id: :desc).limit(1)[0]
-	uri = URI(URI.escape 'https://graph.facebook.com/MemeTroid2/feed?access_token=179212699090439|yOxoAMG_SOjIs3c5jkldeJDSSgw')
+	uri = URI(URI.escape 'https://graph.facebook.com/NeroFledermaus/feed?access_token=179212699090439|yOxoAMG_SOjIs3c5jkldeJDSSgw')
 	Net::HTTP.start(uri.host, uri.port,
 		:use_ssl => uri.scheme == 'https') do |http|
 		request = Net::HTTP::Get.new uri
